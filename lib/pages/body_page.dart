@@ -17,9 +17,9 @@ class _BodyPageState extends State<BodyPage> {
       decoration: InputDecoration(
         border: const OutlineInputBorder(),
         labelText: hint,
-        labelStyle: TextStyle(color: Colors.grey[300]),
+        labelStyle: TextStyle(color: Color.fromARGB(255, 170, 170, 170)),
       ),
-      style: const TextStyle(color: Colors.white),
+      style: const TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
       keyboardType: const TextInputType.numberWithOptions(decimal: true),
       controller: controller,
     );
@@ -37,7 +37,7 @@ class _BodyPageState extends State<BodyPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black87,
+      backgroundColor: Color.fromARGB(221, 255, 255, 255),
       resizeToAvoidBottomInset: true,
       body: SingleChildScrollView(
         child: Padding(
@@ -48,7 +48,8 @@ class _BodyPageState extends State<BodyPage> {
               Center(
                 child: Text(
                   "$result",
-                  style: const TextStyle(fontSize: 30, color: Colors.white),
+                  style: const TextStyle(
+                      fontSize: 30, color: Color.fromARGB(255, 0, 0, 0)),
                 ),
               ),
 
@@ -58,7 +59,7 @@ class _BodyPageState extends State<BodyPage> {
               ),
 
               // text input 1
-              _input("Num 1", firstController),
+              _input("First Number", firstController),
 
               // spacing
               const SizedBox(
@@ -66,7 +67,7 @@ class _BodyPageState extends State<BodyPage> {
               ),
 
               // text input 2
-              _input("Num 2", secondController),
+              _input("Second Number", secondController),
 
               // spacing
               const SizedBox(
@@ -75,7 +76,7 @@ class _BodyPageState extends State<BodyPage> {
 
               // add button
               MyButton(
-                name: "addition",
+                name: "Addition",
                 onTap: () {
                   add(firstController.text, secondController.text);
                 },
@@ -83,21 +84,21 @@ class _BodyPageState extends State<BodyPage> {
 
               // subtract button
               MyButton(
-                  name: "subtraction",
+                  name: "Subtraction",
                   onTap: () {
                     subtract(firstController.text, secondController.text);
                   }),
 
               // multiply button
               MyButton(
-                  name: "multiplication",
+                  name: "Multiplication",
                   onTap: () {
                     multiply(firstController.text, secondController.text);
                   }),
 
               // divide button
               MyButton(
-                  name: "division",
+                  name: "Division",
                   onTap: () {
                     divide(firstController.text, secondController.text);
                   }),

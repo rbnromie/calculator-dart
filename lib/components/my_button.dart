@@ -16,10 +16,10 @@ class MyButton extends StatelessWidget {
         child: ElevatedButton(
           onPressed: onTap,
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.grey[300],
+            backgroundColor: Color.fromARGB(255, 223, 223, 223),
             elevation: 20,
             textStyle: const TextStyle(fontSize: 20),
-            foregroundColor: Colors.black87,
+            foregroundColor: Color.fromARGB(221, 0, 0, 0),
           ),
           child: Text(name),
         ),
