@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.black,
         title: const Center(
           child: Text(
-            "Calculator",
+            "Simple Calculator",
             style: TextStyle(fontSize: 26, color: Colors.white),
           ),
         ),
